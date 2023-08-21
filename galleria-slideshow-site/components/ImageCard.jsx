@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 
-function ImageCard({ src }) {
+function ImageCard({ thumbnail }) {
   return (
     <figure className='h-fit'>
       <Image
-        src={`/assets/starry-night/thumbnail.jpg`}
+        src={thumbnail}
         alt='Gallary Picture Title'
         width={500}
         height={500}
