@@ -2,7 +2,7 @@ import Image from 'next/image';
 import './globals.css';
 
 export const metadata = {
-  title: 'Frontned Mentor | Galleria Slideshow Site',
+  title: 'Frontend Mentor | Galleria Slideshow Site',
   description: '...',
 };
 
