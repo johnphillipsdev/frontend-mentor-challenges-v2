@@ -12,7 +12,9 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <div className='flex justify-between py-6 container'>
-            <Image src='/assets/shared/logo.svg' width={113} height={32} alt='Gallery Logo' />
+            <figure>
+              <Image src='/assets/shared/logo.svg' width={113} height={32} alt='Gallery Logo' />
+            </figure>
             <button className='link-1'>Start Slideshow</button>
           </div>
         </header>
