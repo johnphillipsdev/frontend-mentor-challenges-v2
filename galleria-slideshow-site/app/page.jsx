@@ -31,7 +31,7 @@ export default function Home() {
   });
 
   return (
-    <main className='py-[24px]'>
+    <main className='py-[24px] md:py-[40px]'>
       <div className='container'>
         <div className='masonry-with-columns'>{imageCards}</div>
       </div>
