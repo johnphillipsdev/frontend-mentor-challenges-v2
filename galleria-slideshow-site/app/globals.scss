@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Libre Baskerville', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+@layer components {
+  /* Utilities */
+  .container {
+    @apply w-full mx-auto px-[24px] max-w-[1360px] min-[1360px]:px-0;
+  }
+
+  .masonry-with-columns {
+  }
+
+  .cover-gradient {
+    @apply w-full h-full absolute top-0 left-0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.84) 100%);
+  }
+
+  /* Typography */
+  .display {
+    @apply text-[200px] leading-[150px] font-bold;
+  }
+
+  .heading-1 {
+    @apply text-[24px] leading-[29px] font-bold md:text-[56px] md:leading-[64px];
+  }
+
+  .heading-2 {
+    @apply text-[24px] leading-[29px] font-bold;
+  }
+
+  .heading-3 {
+    @apply text-[18px] leading-[22px] font-bold;
+  }
+
+  .subheading-1 {
+    @apply text-[15px] leading-[19px];
+  }
+
+  .subheading-2 {
+    @apply text-[13px] leading-[17px] opacity-75;
+  }
+
+  .link-1 {
+    @apply text-[12px] leading-[15px] tracking-[2.5px] text-dark-gray uppercase cursor-pointer transition-colors lg:hover:text-black;
+  }
+
+  .link-2 {
+    @apply text-[9px] leading-[11px] tracking-[2px] text-dark-gray underline uppercase cursor-pointer transition-colors lg:hover:text-black;
+  }
+
+  .paragraph {
+    @apply text-[14px] leading-[28px] text-dark-gray font-bold;
+  }
+}
