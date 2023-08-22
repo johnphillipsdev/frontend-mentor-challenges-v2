@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import './globals.css';
+import './globals.scss';
 
 export const metadata = {
   title: 'Frontend Mentor | Galleria Slideshow Site',
