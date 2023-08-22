@@ -1,6 +1,9 @@
 'use client';
 
+// Next.js
 import React, { useEffect, useState } from 'react';
+
+// Components
 import ImageCard from '@/components/ImageCard';
 
 export default function Home() {
