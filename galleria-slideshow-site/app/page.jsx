@@ -24,7 +24,7 @@ export default function Home() {
     const {
       name: title,
       artist: { name },
-      images: { thumbnail, gallery },
+      images: { thumbnail },
     } = artworkData;
 
     return <ImageCard key={index} thumbnail={thumbnail} artist={name} title={title} />;
