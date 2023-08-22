@@ -5,7 +5,7 @@ import React from 'react';
 function ImageCard({ thumbnail, title, artist }) {
   return (
     <Link className='masonry-item' href='/'>
-      <figure className='relative h-fit'>
+      <figure className='relative h-fit md:h-full'>
         <Image
           src={thumbnail}
           alt='Gallary Picture Title'
