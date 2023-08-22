@@ -20,17 +20,20 @@ export default function Home() {
 
   // Loop over data and create card logic.
   const imageCards = data?.map((artworkData, index) => {
+    console.log(artworkData);
     const {
+      name: title,
+      artist: { name },
       images: { thumbnail, gallery },
     } = artworkData;
 
-    return <ImageCard key={index} thumbnail={thumbnail} />;
+    return <ImageCard key={index} thumbnail={thumbnail} artist={name} title={title} />;
   });
 
   return (
     <main className='py-[24px]'>
       <div className='container'>
-        <div className='grid gap-[24px]'>{imageCards}</div>
+        <div className='masonry-with-columns'>{imageCards}</div>
       </div>
     </main>
   );
