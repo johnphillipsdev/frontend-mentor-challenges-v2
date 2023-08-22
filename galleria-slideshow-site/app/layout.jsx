@@ -9,9 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body>
-        <header className='border-b border-light-gray'>
-          <div className='flex justify-between py-6 container'>
+      <body className='relative'>
+        <header className='sticky top-0 z-50 bg-white'>
+          <div className='flex justify-between py-6 container border-b border-light-gray'>
             <figure>
               <Image src='/assets/shared/logo.svg' width={113} height={32} alt='Gallery Logo' />
             </figure>
