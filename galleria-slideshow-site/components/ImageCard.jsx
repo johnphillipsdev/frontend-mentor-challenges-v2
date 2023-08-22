@@ -4,7 +4,7 @@ import React from 'react';
 
 function ImageCard({ thumbnail, title, artist }) {
   return (
-    <Link href='/'>
+    <Link className='masonry-item' href='/'>
       <figure className='relative h-fit'>
         <Image
           src={thumbnail}
@@ -12,8 +12,9 @@ function ImageCard({ thumbnail, title, artist }) {
           width={500}
           height={500}
           style={{
-            height: 'fit-content',
+            height: '100%',
             width: '100%',
+            objectFit: 'cover',
           }}
         />
         <div className='p-[32px] pr-[49px] absolute bottom-0 left-0 text-white z-20'>
