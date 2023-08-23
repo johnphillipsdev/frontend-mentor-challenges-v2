@@ -6,14 +6,13 @@ import ImageCard from '@/components/ImageCard';
 // Libraries
 import useSWR from 'swr';
 
-const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function Home() {
-  const { data, error, isLoading } = useSWR('/api/data', fetcher);
+const fetcher = (url) => fetch(url).then((r) => r.json());
+const { data, error, isLoading } = useSWR('/api/data', fetcher);
 
   // Loop over data and create card logic.
   const imageCards = data?.map((artworkData, index) => {
-    console.log(artworkData);
     const {
       name: title,
       artist: { name },
