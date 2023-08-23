@@ -1,25 +1,15 @@
 'use client';
 
-// Next.js
-import React, { useEffect, useState } from 'react';
-
 // Components
 import ImageCard from '@/components/ImageCard';
 
-export default function Home() {
-  // Setting data states to handle rendering.
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
+// Libraries
+import useSWR from 'swr';
 
-  // Fetch data from api src using provided data.
-  useEffect(() => {
-    fetch('/api/data')
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
+const fetcher = (url) => fetch(url).then((r) => r.json());
+
+export default function Home() {
+  const { data, error, isLoading } = useSWR('/api/data', fetcher);
 
   // Loop over data and create card logic.
   const imageCards = data?.map((artworkData, index) => {
@@ -35,9 +25,7 @@ export default function Home() {
 
   return (
     <main className='py-6 md:py-10'>
-      <div className='container'>
-        <div className='masonry-with-columns'>{imageCards}</div>
-      </div>
+      <div className='container'>{isLoading ? <p>Loading...</p> : <div className='masonry-with-columns'>{imageCards}</div>}</div>
     </main>
   );
 }
