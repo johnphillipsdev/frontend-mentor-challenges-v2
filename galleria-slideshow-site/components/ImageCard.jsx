@@ -22,7 +22,7 @@ function ImageCard({ thumbnail, title, artist }) {
           <h2 className='heading-2'>{title}</h2>
           <h3 className='subheading-2 mt-[7px]'>{artist}</h3>
         </div>
-        <span className='cover-gradient z-10'></span>
+        <span className='cover-gradient h-[170px] top-auto bottom-0 z-10'></span>
       </figure>
     </Link>
   );
