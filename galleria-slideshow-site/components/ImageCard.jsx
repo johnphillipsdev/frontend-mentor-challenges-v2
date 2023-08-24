@@ -2,13 +2,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-function ImageCard({ thumbnail, title, artist }) {
+function ImageCard({ thumbnail, title, artist, index }) {
+  const handle = title.toLowerCase().replace(/\s+/g, '-');
+
   return (
-    <Link className='masonry-item group' href='/'>
+    <Link href={`/artwork/${handle}?slide=${index}`} className='masonry-item group'>
       <figure className='relative h-fit md:h-full'>
         <Image
           src={thumbnail}
-          alt='Gallary Picture Title'
+          alt={title}
           width={500}
           height={500}
           style={{

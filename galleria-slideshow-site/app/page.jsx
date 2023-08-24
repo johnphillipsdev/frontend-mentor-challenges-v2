@@ -18,7 +18,9 @@ export default function Home() {
       images: { thumbnail },
     } = artworkData;
 
-    return <ImageCard key={index} thumbnail={thumbnail} artist={name} title={title} />;
+    return (
+      <ImageCard key={index} index={index} thumbnail={thumbnail} artist={name} title={title} />
+    );
   });
 
   return (
