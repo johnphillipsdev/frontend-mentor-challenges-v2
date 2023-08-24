@@ -30,7 +30,6 @@ export default function Loader() {
 
     if (isLoading) {
       tl.play();
-      // document.querySelector('body').classList.remove('overflow-y-hidden');
     }
   }, [isLoading]);
 
