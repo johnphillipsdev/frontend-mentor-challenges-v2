@@ -23,7 +23,9 @@ export default function Home() {
 
   return (
     <main className='py-6 md:py-10'>
-      <div className='container'>{isLoading ? <p>Loading...</p> : <div className='masonry-with-columns'>{imageCards}</div>}</div>
+      <div className='container'>
+        {isLoading ? <p>Loading...</p> : <div className='masonry-with-columns'>{imageCards}</div>}
+      </div>
     </main>
   );
 }
