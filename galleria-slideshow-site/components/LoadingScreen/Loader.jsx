@@ -2,7 +2,7 @@
 
 // Next.js
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 
 // Components
 import Spinner from './Spinner';
@@ -18,7 +18,7 @@ export default function Loader() {
 
   const containerRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const tl = gsap.timeline();
 
     tl.to('#loading-text', { opacity: 0 })
@@ -48,7 +48,7 @@ export default function Loader() {
         src='/assets/girl-with-pearl-earring/thumbnail.jpg'
         alt='girl-with-pearl-earring'
         priority
-        width={310}
+        width={327}
         height={400}
       />
     </div>
