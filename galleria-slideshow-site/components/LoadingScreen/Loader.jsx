@@ -46,7 +46,7 @@ export default function Loader() {
         id='loading-image'
         className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0'
         src='/assets/girl-with-pearl-earring/thumbnail.jpg'
-        alt='Gallary Picture Title'
+        alt='girl-with-pearl-earring'
         priority
         width={310}
         height={400}
