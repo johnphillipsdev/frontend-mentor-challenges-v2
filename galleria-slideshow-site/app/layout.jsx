@@ -1,7 +1,10 @@
-'use client';
-
+// Imports
 import './globals.scss';
+
+// Next.js
 import Image from 'next/image';
+
+// Components
 import Loader from '@/components/LoadingScreen/Loader';
 
 export const metadata = {

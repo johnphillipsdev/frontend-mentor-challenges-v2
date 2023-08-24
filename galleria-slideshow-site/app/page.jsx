@@ -2,7 +2,6 @@
 
 // Components
 import ImageCard from '@/components/ImageCard';
-import Loader from '@/components/LoadingScreen/Loader';
 
 // Libraries
 import useSWR from 'swr';
