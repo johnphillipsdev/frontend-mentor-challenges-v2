@@ -50,7 +50,7 @@
 
   .chase-dot:before {
     content: '';
-    @apply block w-1/4 h-1/4 bg-black rounded-full;
+    @apply block w-1/4 h-1/4 bg-white rounded-full;
     animation: sk-chase-dot-before 2s infinite ease-in-out both;
   }
 
